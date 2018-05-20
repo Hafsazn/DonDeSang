@@ -21,6 +21,7 @@
  </style>
 </head>
 <body>
+ <h2><center>Gestion des planning</center></h2>
  <table>
  <tr>
   <th>Id</th> 
