@@ -20,6 +20,7 @@
  </style>
 </head>
 <body>
+ <h2><center>Gestion des salles</center></h2>
  <table>
  <tr>
   <th>Numero</th> 
