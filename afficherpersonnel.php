@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php include('AdminAcc.php');?>
 <html>
 <head>
  <title>Table with database</title>
