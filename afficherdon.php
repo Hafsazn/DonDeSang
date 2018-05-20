@@ -20,6 +20,7 @@
  </style>
 </head>
 <body>
+ <h2><center>Gestion des dons</center></h2>
  <table>
  <tr>
   <th>Id</th> 
