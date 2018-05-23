@@ -20,6 +20,9 @@ if(isset($_GET['Id']) AND $_GET['Id'] > 0) {
          <br />
          Email = <?php echo $userinfo['Email']; ?>
          <br />
+         CIN = <?php echo $userinfo['CIN']; ?>
+         <br />         
+
          <?php
          if(isset($_SESSION['Email']) AND $userinfo['Email'] == $_SESSION['Email']) {
          ?>
@@ -28,6 +31,7 @@ if(isset($_GET['Id']) AND $_GET['Id'] > 0) {
          <a href="deconnexion.php">Se déconnecter <br> <br></a>
          <a href="rdv.php">Prendre un rendez-vous <br> <br></a>
          <?php
+         include('afficherrdv.php');
          }
          ?>
       </div>
