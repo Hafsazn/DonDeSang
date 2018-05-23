@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<?php include('AdminAcc.php');?>
+ <?php include('AdminAcc.php');?>
 <html>
 <head>
- <title>Table with database</title>
  <style>
   table {
    border-collapse: collapse;
@@ -24,12 +23,12 @@
  <table>
  <tr>
   <th>Id</th> 
-  <th>Type</th> 
+  <th>Type</th>
+  <th>Groupe sanguin</th>
   <th>Duree(min)</th>
   <th>Salle</th>
   <th>Heure</th>
   <th>Date</th>
-  <th>Centre</th>
   <th>Actions</th>
  </tr>
  <?php
@@ -44,16 +43,20 @@ include ('connexionBD.php');
   {
     $id=$data[$i]["Id_Don"];
     $type=$data[$i]["Type"];
+    $gs=$data[$i]["GS"];
     $duree=$data[$i]["Duree"];
     $salle=$data[$i]["Salle"];
     $heure=$data[$i]["Heure"];
     $date=$data[$i]["Date"];
-    $centre=$data[$i]["Centre"];
     
-    echo "<tr><td>$id</td><td>$type</td><td>$duree</td><td>$salle</td><td>$heure</td><td>$date</td><td>$centre</td></tr>";
-    echo "<td>";
-    echo "<a href='supprimerdon.php?Id_Don=$id' onclick='return confirm(\"Etes vous sur de vouloir supprimer ? \");' class='btn btn=danger'>Supprimer </a>";
-    echo "<a href='' class='btn btn=danger'>Modifier</a>";
+    
+    
+    $modSupp="<a href='supprimerdon.php?Id_Don=$id' onclick='return confirm(\"Etes vous sur de vouloir supprimer ? \");' class='btn btn=danger'>Supprimer </a>";
+    $modSupp=$modSupp."<a href='' class='btn btn=danger'>Modifier</a>";
+    echo "<tr><td>$id</td><td>$type</td><td>$gs</td><td>$duree</td><td>$salle</td><td>$heure</td><td>$date</td><td>$modSupp</td></tr>";
+   // echo "<td>";
+    //echo "<a href='supprimerdon.php?Id_Don=$id' onclick='return confirm(\"Etes vous sur de vouloir supprimer ? \");' class='btn btn=danger'>Supprimer </a>";
+    //echo "<a href='' class='btn btn=danger'>Modifier</a>";
    
   }
   //if ($result->num_rows > 0) {
