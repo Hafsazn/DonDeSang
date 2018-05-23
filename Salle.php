@@ -23,7 +23,7 @@
 
             <tr>
                 <td>
-                    <label for="DonPoss">Don possible :</label>
+                    <label for="DonPoss">Type de don :</label>
                 </td>
                 <td>
                     <select name="TypeDon">
