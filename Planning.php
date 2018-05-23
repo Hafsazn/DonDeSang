@@ -3,7 +3,7 @@
     <?php include ('connexionBD.php');
     $query = $bdd->prepare("SELECT * FROM personnel WHILE Prenom = ?");
     //$personnel= htmlspecialchars($_POST['Personnel']);
-    $rslt= mysqli_query($bdd, $query);
+ //$rslt= mysqli_query($bdd, $query);
     ?>
 <html>
 <head>
@@ -20,11 +20,13 @@
             <td><label>Afficher un planning</label> </td><br>
                 <td>
                     <select method= "post" name="Personnel">
-                        <?php
-                           while ($row = mysqli_fetch_array($rslt)):;
-                        ?>
-                        <?php echo $row[1];?>
-                        <?php endwhile;?>
+                        
+                        <option>Labiad</option>
+                        <option>Zidani</option>
+                        <option>Alaoui</option>
+                    </select>
+                </td>
+            </tr> 
                        
                     </select>
                 </td><br>
@@ -37,18 +39,12 @@
     
         <tr>
             <td><label>Ajouter un horaire</label> </td><br>
-         Id : <input type="text" name="Id_planning"><br>
+         
 
             Date :
             <input type="date" name="Date"><br>
             Salle :
-                <td>
-                    <select name="Salle">
-                        <option>Salle A</option>
-                        <option>Salle B</option>
-                        <option>Salle C</option>
-                    </select>
-                </td><br>
+                <input type="text" name="Salle"><br>
             Type :
                 <td>
                     <select name="Type">
@@ -63,9 +59,9 @@
             Personnel :<br>
             <td>
                     <select name="Personnel">
-                        <option>Nom1</option>
-                        <option>Nom2</option>
-                        <option>Nom3</option>
+                        <option>Labiad</option>
+                        <option>Zidani</option>
+                        <option>Alaoui</option>
                     </select>
                 </td><br>
         </tr>
