@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<?php include('AdminAcc.php');?>
+ <?php include('AdminAcc.php');?>
 <html>
 <head>
  <title>Table with database</title>
  <style>
   table {
    border-collapse: collapse;
-   width: 100%;
+   width:100%;
    color: #588c7e;
    font-family: monospace;
    font-size: 25px;
@@ -41,10 +41,12 @@ include ('connexionBD.php');
     $capmax=$data[$i]["CapaciteMax"];
     $typedon=$data[$i]["TypeDon"];
     
-    echo "<tr><td>$numero</td><td>$capmax</td><td>$typedon</td></tr>";
-    echo "<td>";
-    echo "<a href='supprimersalle.php?Numero=$numero' onclick='return confirm(\"Etes vous sur de vouloir supprimer ? \");' class='btn btn=danger'>Supprimer </a>";
-    echo "<a href='' class='btn btn=danger'>Modifier</a>";
+    $modSupp="<a href='supprimersalle.php?Numero=$numero' onclick='return confirm(\"Etes vous sur de vouloir supprimer ? \");' class='btn btn=danger'>Supprimer </a>";
+    $modSupp=$modSupp."<a href='' class='btn btn=danger'>Modifier</a>";
+    echo "<tr><td>$numero</td><td>$capmax</td><td>$typedon</td><td>$modSupp</td></tr>";
+    //echo "<td>";
+    //echo "<a href='supprimersalle.php?Numero=$numero' onclick='return confirm(\"Etes vous sur de vouloir supprimer ? \");' class='btn btn=danger'>Supp </a>";
+    //echo "<a href='' class='btn btn=danger'>Mod</a>";
    
   }
   //if ($result->num_rows > 0) {
