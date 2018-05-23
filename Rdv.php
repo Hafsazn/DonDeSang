@@ -21,66 +21,48 @@
     
     <label for="Titre">Espace donneur</label>
     
-     <form action="rdv.php" method="POST">
-       <table width="450px" class="table1" align="center">
-         <label for="RV"> Choisir mon rendez-vous </label><br>
-            <tr>
+     <form method="post" action="ajoutrdv.php" >
+       
+         <tr>
+            <td><label><br><br><br><br><br><br>Ajouter un horaire</label> </td><br>
+            CIN : <input type="text" name="CIN"><br>
+            Type de don :
                 <td>
-                    <label for="TypeDon">Type de don :</label>
-                </td>
-                <td>
-                    <select>
-                        <option>Type de don</option>
+                    <select name="Type">
                         <option>Sang</option>
                         <option>Plasma</option>
                         <option>Plaquettes</option>
                     </select>
-                </td>
-            </tr> 
-        <tr>
-            <td>
-                <label>Date :</label>
-            </td>
-            <td>
-                <input type="date">
-            </td>
-        </tr><br>
-        <tr>
+                </td><br>
+                Groupe sanguin :
                 <td>
-                    <label>Heure :</label>
-                </td>
-                <td>
-                    <input type="time">
-                </td>
-            </tr>
+                    <select name="GS">
+                        <option>A+</option>
+                        <option>A-</option>
+                        <option>B+</option>
+                        <option>B-</option>
+                        <option>AB+</option>
+                        <option>AB-</option>
+                        <option>O+</option>
+                        <option>O-</option>
+                    </select>
+                </td><br>
+            Date :
+            <input type="date" name="Date"><br>
+            
+           
+            Heure : <input type="time" name="Heure"><br>
+            
+        </tr>
         <tr>
             <td>
                 <input type="submit" name="Valider" value="valider mon rendez-vous" class="valider">
             </td>
         </tr>
-        </table>
+        
      </form>
 
-     <form>
-        <table width="450px" class="table2" align="center">
-            <label for="centre"> Choisir mon centre de don </label><br>
-           <tr>
-               <td>
-                   <input type="text">
-               </td>
-           </tr>
-           <tr>
-               <td>
-                   <input type="submit" name="Valider" value="Trouver mon centre" class="valider">
-               </td>
-           </tr>
-        </table>
-           
-        </form>
-
-        <form>
-            <label for="tableau"> Mes rendez-vous prévus</label><br>
-        </form>
+     
         
 
 
